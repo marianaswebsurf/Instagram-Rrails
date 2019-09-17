@@ -1,0 +1,18 @@
+
+<center>
+
+<div style="margin-top: 200px;">
+
+<h1 style="font-family: monospace; font-size: 35px;">New Photo</h1>
+
+<%= form_for @photos do |form| %>
+	<p>
+	   <%= form.label :caption %><br>
+	   <%= form.text_area :caption %>
+	</p>
+
+	<p>
+	   <%= form.submit %>
+	</p>
+<% end %>
+</center>
