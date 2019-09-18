@@ -3,7 +3,7 @@
 <h1>Instagram Web</h1>
 <br>
 <% if current_user %>
-	<%= link_to 'Logout', ddestroy_user_session_path, method: :delete %>
+	<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
 
 	<br>
 		<%= link_to 'New Photo', new_photo_path %> 
