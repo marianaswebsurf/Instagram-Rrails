@@ -11,13 +11,13 @@ class PhotosController < ApplicationController
 		 	redirect_to @photo
 
 		else
-			byebug
 			render :new
 		end	
  	end
  	
  	def show
  		@photo = Photo.find(params[:id])
+ 		@comment = Comment.new
  	end
 
  	private 

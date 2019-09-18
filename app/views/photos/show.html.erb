@@ -11,5 +11,23 @@
 		<%= image_tag image, height: 50 %>
  	<% end %>
  <% else %>
- 	<p>enter your comment</p>
+ 	<p>enter your comment :</p>
  <% end %>
+
+<ul>	
+ <% if @photo.comments.any? %>
+	<% @photo.comments.each do |comment| %>
+		<li>
+	 	<%= comment.message %>
+	 	</li>
+ 	<% end %>
+ <% end %>
+</ul>
+
+ <%= form_for @comment, url: photo_comments_path(@photo) do |form| %>
+ 	<%= form.label :message %>
+ 	<%= form.text_area :message %>
+
+	<%= form.submit %>
+<% end %>
+
