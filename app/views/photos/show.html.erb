@@ -1,6 +1,15 @@
 
 
-
-
-<p style="text-align: center; margin-top: 200px;">photo blank hmmmmmmmm :D</p>
 <h1><%= @photo.caption %></h1>
+
+<% if @photo.image.attached? %> 
+	<%= image_tag @photo.image %>
+<% end %>
+
+<% if @photo.images.attached? %>
+	<%= @photo.images.each do |image| %>
+		<%= image_tag image, height: 50 %>
+ 	<% end %>
+ <% else %>
+ 	<p>enter your comment</p>
+ <% end %>

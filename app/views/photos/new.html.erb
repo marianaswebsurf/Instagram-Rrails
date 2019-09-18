@@ -5,10 +5,20 @@
 
 <h1 style="font-family: monospace; font-size: 35px;">New Photo</h1>
 
-<%= form_for @photos do |form| %>
+<%= form_for @photo do |form| %>
 	<p>
 	   <%= form.label :caption %><br>
 	   <%= form.text_area :caption %>
+	</p>
+
+	<p>
+		<%= form.label :image %><br>
+		<%= form.file_field :image %>
+	</p>
+	  
+	<p>
+		<%= form.label :images %><br>
+		<%= form.file_field :images, multiple: true %>
 	</p>
 
 	<p>

@@ -8,11 +8,7 @@
 <p>Click the blue to</p>
 <%= link_to 'upload_photo' ,  new_photo_path %>
 
-</center>
 
-
-<h1>Instagram Web</h1>
-<br>
 <% if current_user %>
 	<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
 
@@ -26,3 +22,7 @@
 		<%= link_to 'Register', new_user_session_path %>
 
 	<% end %>
+
+</center>
+
+

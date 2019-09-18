@@ -1,29 +1,27 @@
 class PhotosController < ApplicationController
-	def index 
- 		@photos = Photo.all
- 	end
 
  	def new 
- 		@photos = Photo.new
+ 		@photo = Photo.new
  	end
 
  	def create 
- 		@photo = Photo.new(photo_params)
+ 		@photo = current_user.photos.create(photo_params)
  	
- 		if @photo.save 
+ 		if @photo.save
 		 	redirect_to @photo
 
 		else
+			byebug
 			render :new
-		end
+		end	
  	end
  	
- 		def show
- 			@photo = Photo.find(params[:id])
- 		end
+ 	def show
+ 		@photo = Photo.find(params[:id])
+ 	end
 
  	private 
  	def photo_params
- 		params.require(:photo).permit(:caption)
+ 		params.require(:photo).permit(:caption, :image)
  	end
  end
