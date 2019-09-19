@@ -9,7 +9,6 @@ class PhotosController < ApplicationController
  	
  		if @photo.save
 		 	redirect_to @photo
-
 		else
 			render :new
 		end	

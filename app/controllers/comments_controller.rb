@@ -8,11 +8,12 @@ class CommentsController < ApplicationController
 		end
 	end
 
-
-
-	private
-	def message_params
-		params.require(:comment).permit(:message)
-		
+	def show 
+		@comment = Comment.find(params[:id])
 	end
+	
+	private
+		def message_params
+			params.require(:comment).permit(:message)		
+		end
 end
