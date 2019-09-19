@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
 		if @comment.save
 			redirect_to photo_url(@comment.photo)
 		else 
-			redirect_to root_url
+			redirect_to root_urls
 		end
 	end
 

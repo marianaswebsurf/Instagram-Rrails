@@ -3,14 +3,14 @@
 
 <body style="background-color: #1CCEEE;">
 
-<div style="margin-top: 120px;"></div>
+<div style="margin-top: 100px;"></div>
 
-<h1 style="font-family: monospace; font-size: 35px; ">New Photo</h1>
+<h1 style="font-family: 'Lacquer'; font-size: 40px; ">New Photo</h1>
 
 
 <%= form_for @photo do |form| %>
 	<p>
-	   <%= form.label :caption %><br>
+	   <%= form.label :caption , style:"font-family: 'Share Tech Mono', monospace; font-size: 25px;" %><br>
 	   <%= form.text_area :caption %>
 	</p>
 

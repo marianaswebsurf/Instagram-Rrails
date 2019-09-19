@@ -2,30 +2,31 @@
 <center>
 <body style="background-color: #51A4FE;">
 
-<div style="margin-top: 200px;">
+<div style="margin-top: 100px;">
 
-<h1 style="font-family: monospace;">Hello Universe</h1>
+<h1 style="font-family: 'Lacquer', sans-serif;">Hello Universe</h1>
 
 <p>Click the blue to</p>
 
-
+<div style="display: block;">
 <% if current_user %>
-	<%= link_to 'Logout' , destroy_user_session_path, method: :delete, style: "text-decoration: none;"  %>
+	<%= link_to 'Logout' , destroy_user_session_path, method: :delete, style: "text-decoration: none; color: white;", :class => "button btn btn-danger" %>
 
 	<br>
-		<%= link_to 'New Photo', new_photo_path , style: "text-decoration: none;" %> 	
+		<%= link_to 'New Photo', new_photo_path , style: "text-decoration: none; color: white;" , :class => "button btn btn-success"  %> 	
 	
 	<% else %>
 	
 		<li>
-			<%= link_to 'Login', user_session_path , style: "text-decoration: none;" %><br><br>
+			<%= link_to 'Login', user_session_path , style: "text-decoration: none; color: white;" , :class => "button btn btn-success" %><br><br>
 		</li>
 
 		<li>
-			<%= link_to 'Register', new_user_registration_path , style: "text-decoration: none;" %><br><br>
+			<%= link_to 'Register', new_user_registration_path , style: "text-decoration: none; color: white;", :class => "button btn btn-success" %><br><br>
 		</li>
 				
 	<% end %>
+</div>
 </div>
 
 	
@@ -35,7 +36,7 @@
 
 <center>
 			<li>
-		<%= link_to 'Shortcut' ,  new_photo_path , style: "text-decoration: none;" %>
+		<%= link_to 'Shortcut' ,  new_photo_path , style: "text-decoration: none; color: white;", :class => "button btn btn-success" %>
 		<p>Login first to make it all works</p>
 			</li>
 </center>
