@@ -1,44 +1,47 @@
 
 <center>
-<body style="background-color: #51A4FE;">
+<body style="background-color: #D0E11D;">
 
 <div style="margin-top: 100px;">
 
-<h1 style="font-family: 'Lacquer', sans-serif;">Hello Universe</h1>
+<h1 style="font-family: 'Lacquer', sans-serif;">Hello Instagram (v2)</h1>
 
-<p>Click the blue to</p>
+<p>Click the green to</p>
 
-<div style="display: block;">
+
 <% if current_user %>
-	<%= link_to 'Logout' , destroy_user_session_path, method: :delete, style: "text-decoration: none; color: white;", :class => "button btn btn-danger" %>
+		
+		<%= link_to 'Logout' , destroy_user_session_path, method: :delete, style: "text-decoration: none; color: white;" "margin-top:-345px;" "margin-left:1200px;" , class:"button btn btn-danger" %>
+		<br>
 
-	<br>
-		<%= link_to 'New Photo', new_photo_path , style: "text-decoration: none; color: white;" , :class => "button btn btn-success"  %> 	
-	
+<div style="margin-top: -20px;">
+
+		<ul class="list-unstyled list-inline">
+		<%= link_to 'New Photo', new_photo_path , style: "text-decoration: none; color: white;" , class:"button btn btn-success"  %> 	
+		<li class="list-inline-item">
+
+
 	<% else %>
-	
-		<li>
-			<%= link_to 'Login', user_session_path , style: "text-decoration: none; color: white;" , :class => "button btn btn-success" %><br><br>
-		</li>
 
-		<li>
-			<%= link_to 'Register', new_user_registration_path , style: "text-decoration: none; color: white;", :class => "button btn btn-success" %><br><br>
-		</li>
+		<ul class="list-unstyled list-inline">
+			<%= link_to 'Login', user_session_path , style: "text-decoration: none; color: white;" , class:"button btn btn-success" %><br><br>
+		
+
+		
+			<%= link_to 'Register', new_user_registration_path , style: "text-decoration: none; color: white;", class:"button btn btn-success" %><br><br>
+		<li class="list-inline-item">
 				
 	<% end %>
 </div>
 </div>
-
-	
-
-</center>
 </body>
 
 <center>
-			<li>
-		<%= link_to 'Shortcut' ,  new_photo_path , style: "text-decoration: none; color: white;", :class => "button btn btn-success" %>
+		<ul class="list-unstyled list-inline">
+		<%= link_to 'Shortcut' ,  new_photo_path , style: "text-decoration: none; color: white;" "margin-top: 15px;" , class:"button btn btn-info" %>
 		<p>Login first to make it all works</p>
-			</li>
+		<li class="list-inline-item">
+</center>
 </center>
 
 

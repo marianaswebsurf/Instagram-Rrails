@@ -1,33 +1,34 @@
 
-<center>
+<div class="text-center">
 
-<body style="background-color: #1CCEEE;">
+<body style="background-color: #1CCEEE;"></body>
 
 <div style="margin-top: 100px;"></div>
 
 <h1 style="font-family: 'Lacquer'; font-size: 40px; ">New Photo</h1>
 
-
 <%= form_for @photo do |form| %>
+
+	<%= link_to 'Logout' , destroy_user_session_path, method: :delete, style: "text-decoration: none; color: white;" "margin-top:-260px;" "margin-left:1200px;" , class:"button btn btn-danger" %>
+
 	<p>
 	   <%= form.label :caption , style:"font-family: 'Share Tech Mono', monospace; font-size: 25px;" %><br>
 	   <%= form.text_area :caption %>
 	</p>
 
-	<p>
+	<p>	
 		<%= form.label :image %><br>
 		<%= form.file_field :image %>
 	</p>
 	  
-	<p>
+	<p>	
 		<%= form.label :images %><br>
 		<%= form.file_field :images, multiple: true %>
 	</p>
 
 	<p>
-	   <%= form.submit %>
+	   <%= form.submit 'Enter' %>
 	</p>
 
 <% end %>
 </div>
-</center>
